@@ -16,7 +16,10 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TEMPLATE_DIR=os.path.join(BASE_DIR, 'Templates')
 STATIC_DIR=os.path.join(BASE_DIR, 'Static')
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/master
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/

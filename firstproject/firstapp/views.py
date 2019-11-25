@@ -24,6 +24,7 @@ def login(request):
 
 def welcome(request):
     dict={'welcome':"Congratulations! You are signed in"}
+<<<<<<< HEAD
     return render(request,'firstapp/login_welcome.html',context=dict)
 
 
@@ -112,3 +113,6 @@ def destroy(request, id):
 
 def logout(request):
     return redirect("/logintask3")
+=======
+    return render(request,'firstapp/login_welcome.html',context=dict)
+>>>>>>> origin/master

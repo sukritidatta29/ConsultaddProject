@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 from django.db import models
 # Create your models here.
 
@@ -39,3 +40,12 @@ class Post(models.Model):
 
     class Meta:
         db_table = "post"
+=======
+
+# Create your models here.
+
+
+
+
+
+>>>>>>> origin/master
