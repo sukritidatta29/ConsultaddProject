@@ -18,9 +18,18 @@ from django.urls import path
 from firstapp import views
 
 urlpatterns = [
+path('', views.landing),
     path('admin/', admin.site.urls),
-    path('home/', views.home),
+    path('home/', views.home, name='Task1'),
     path('about/', views.about),
-    path('login/', views.login),
+    path('login/', views.login, name='Task2'),
     path('welcome/', views.welcome),
+    path('signup/', views.signup_view, name='Task3'),
+    path('logintask3/', views.success),
+    path('post', views.post),
+    path('show/',views.show),
+    path('edit/<int:id>', views.edit),
+    path('update/<int:id>', views.update),
+    path('delete/<int:id>', views.destroy),
+    path('logout/', views.logout),
 ]

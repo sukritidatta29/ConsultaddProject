@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'crudcss/style.css' %}"/>
+</head>
+<body>
+<form method="POST" class="post-form" action="/update/{{post.id}}">
+        {% csrf_token %}
+    <div class="container">
+<br>
+    <div class="form-group row">
+    <label class="col-sm-1 col-form-label"></label>
+    <div class="col-sm-4">
+    <h3>Update Details</h3>
+    </div>
+  </div>
+    <div class="form-group row">
+    <label class="col-sm-2 col-form-label">Blogger Id:</label>
+    <div class="col-sm-4">
+        <input type="text" name="pid" id="id_pid" required maxlength="20" value="{{ post.pid }}"/>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-sm-2 col-form-label">Blogger Name:</label>
+    <div class="col-sm-4">
+        <input type="text" name="pname" id="id_pname" required maxlength="20" value="{{ post.pname }}" />
+    </div>
+  </div>
+    <div class="form-group row">
+    <label class="col-sm-2 col-form-label">Blogger Email:</label>
+    <div class="col-sm-4">
+        <input type="email" name="pemail" id="id_pemail" required maxlength="254" value="{{ post.pemail }}" />
+    </div>
+  </div>
+    <div class="form-group row">
+    <label class="col-sm-2 col-form-label">Blogs</label>
+    <div class="col-sm-4">
+<textarea class="form-control" rows="5" name="blog" id="id_blog" required maxlength="1000" value="{{ post.blog }}" ></textarea>
+
+    </div>
+  </div>
+    <div class="form-group row">
+    <label class="col-sm-1 col-form-label"></label>
+    <div class="col-sm-4">
+    <button type="submit" class="btn btn-success">Update</button>
+    </div>
+  </div>
+    </div>
+</form>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{%load staticfiles%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="{%static 'firstapp_css/login.css'%}" rel="stylesheet" type="text/css">
+
+
+</head>
+<body>
+<img src="{%static 'firstapp/welcomeimage.png' %}" HEIGHT="300" width="300">
+
+
+<form>
+<div class="box">
+<h1>{{name}}</h1>
+
+
+
+<input type="email" name="email" placeholder="email" class="email" required/>
+
+
+
+<input type="password" name="password" placeholder="password" class="password" required/>
+
+    <a href="/show/"><div class="btn">Login</div></a>
+
+
+</div>
+
+</form>
+
+</body>
+</html>
